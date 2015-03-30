@@ -84,13 +84,13 @@ function matchPrologueDirectives(prologueDirectives, node) {
     let found = null;
     for (let i = 0; i < body.length; i++) {
         if (body[i].type !== "ExpressionStatement") {
-            break;
+            continue;
         }
 
         const expr = body[i].expression;
         const isStringLiteral = (expr.type === "Literal" && typeof expr.value === "string");
         if (!isStringLiteral) {
-            break;
+            continue;
         }
 
         if (prologueDirectives.indexOf(expr.value) >= 0) {

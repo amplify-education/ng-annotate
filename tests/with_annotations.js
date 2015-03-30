@@ -739,6 +739,13 @@ var foos3 = function($scope) {
 };
 foos3.$inject = ["$scope"];
 
+var foos4 = function($scope) {
+    var someVariable = 1;
+    var someOtherVariable = 2;
+    "ngInject";
+};
+foos4.$inject = ["$scope"];
+
 var dual1 = function(a) { "ngInject" }, dual2 = function(b) { "ngInject" };
 dual1.$inject = ["a"];
 dual2.$inject = ["b"];

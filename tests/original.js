@@ -714,6 +714,12 @@ var foos3 = function($scope) {
     "use strict"; "ngInject";
 };
 
+var foos4 = function($scope) {
+    var someVariable = 1;
+    var someOtherVariable = 2;
+    "ngInject";
+};
+
 var dual1 = function(a) { "ngInject" }, dual2 = function(b) { "ngInject" };
 
 g(function(c) {
